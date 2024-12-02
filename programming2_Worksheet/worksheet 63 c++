@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+   string name;
+   int num;
+   cout << "학번 입력: ";
+   cin >> num;
+   cout << "이름 입력: ";
+   cin >> name;
+
+   cout << endl << "학번: " << num << endl;
+   cout << "이름: " << name << endl;
+   return 0;
+}
