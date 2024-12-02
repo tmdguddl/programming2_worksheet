@@ -1,0 +1,22 @@
+﻿#include <stdio.h>
+
+int main()
+{
+	char dept[20];
+	int id;
+	char name[10];
+
+	printf("학과 입력 : ");
+	scanf_s("%s", dept, 20);
+
+	printf("학번 입력 : ");
+	scanf_s("%d", &id);
+
+	printf("이름 입력 : ");
+	scanf_s("%s", name, 10);
+
+	printf("학과 : %s\n", dept);
+	printf("학번 : %d\n", id);
+	printf("이름 : %s\n", name);
+
+}

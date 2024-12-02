@@ -1,0 +1,10 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char sentence[100];
+    gets(sentence);
+
+    printf("%s\n", sentence);
+    printf("%lu글자\n", strlen(sentence));
+}

@@ -1,0 +1,40 @@
+#include <iostream>
+using namespace std;
+
+class Point {
+public:
+    int x, y;
+    
+    Point(int x_val, int y_val) : x(x_val), y(y_val) {}
+};
+
+class Rectangle {
+private:
+    Point p1, p2;
+    
+public:
+    Rectangle(Point point1, Point point2) : p1(point1), p2(point2) {}
+    
+    int getArea() {
+        int width = abs(p2.x - p1.x);
+        int height = abs(p2.y - p1.y);
+        return width * height;
+    }
+};
+
+int main() {
+    int x1, y1, x2, y2;
+    
+    cout << "p1의 좌표를 입력하세요: ";
+    cin >> x1 >> y1;
+    
+    cout << "p2의 좌표를 입력하세요: ";
+    cin >> x2 >> y2;
+    
+    Point point1(x1, y1);
+    Point point2(x2, y2);
+    Rectangle rect(point1, point2);
+
+    cout << "사각형 면적은: " << rect.getArea() << endl;
+    
+}

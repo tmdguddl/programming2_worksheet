@@ -1,0 +1,38 @@
+#include <stdio.h>
+
+int main() {
+    int score;
+    printf("점수 입력: ");
+    scanf("%d", &score);
+
+    switch (score / 5) {
+        case 19:
+        case 20:
+            printf("A+\n");
+            break;
+        case 18:
+            printf("A\n");
+            break;
+        case 17:
+            printf("B+\n");
+            break;
+        case 16:
+            printf("B\n");
+            break;
+        case 15:
+            printf("C+\n");
+            break;
+        case 14:
+            printf("C\n");
+            break;
+        case 13:
+            printf("D+\n");
+            break;
+        case 12:
+            printf("D\n");
+            break;
+        default:
+            printf("F\n");
+            break;
+    }
+}

@@ -1,0 +1,46 @@
+#include<stdio.h>
+#include<math.h>
+#include<stdlib.h>
+struct point {
+   int x;
+   int y;
+};
+struct rectangle {
+   struct point p1;
+   struct point p2;
+};
+
+double distance(point p1, point p2); //51
+int area(point p1, point p2); //52
+int main() {
+   point p1, p2;
+   rectangle r;
+
+   printf("한 점의 좌표(x,y): ");
+   scanf_s("%d %d", &p1.x, &p1.y);
+   printf("한 점의 좌표(x,y): ");
+   scanf_s("%d %d", &p2.x, &p2.y);
+
+   //51 거리
+   printf("(%d, %d)-(%d, %d)의 거리 = %f\n",
+      p1.x, p1.y, p2.x, p2.y, distance(p1, p2));
+
+   //52 면적
+   r.p1 = p1;
+   r.p2 = p2;
+   printf("(%d, %d)-(%d, %d)의 면적 = %d\n",
+      p1.x, p1.y, p2.x, p2.y, area(p1, p2));
+   printf("(%d, %d)-(%d, %d)의 면적 = %d\n",
+      p1.x, p1.y, p2.x, p2.y, rectArea(r));
+}
+int rectArea(rectangle r) {
+   return abs(r.p2.x - r.p1.x) * abs(r.p2.y - r.p1.y);
+}
+int area(point p1, point p2) {
+   return abs(p2.x - p1.x) * abs(p2.y - p1.y);
+}
+double distance(point p1, point p2)
+{
+   return sqrt((p2.x - p1.x)* (p2.x - p1.x)
+      + (p2.y - p1.y)* (p2.y - p1.y));
+}

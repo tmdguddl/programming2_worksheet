@@ -1,0 +1,10 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char s[10], t[10];
+    scanf("%s", s);
+    scanf("%s", t);
+    strncat(s, t, sizeof(s) - strlen(s) - 1);  // strncat 사용하여 s와 t 연결
+    printf("%s\n", s);
+}

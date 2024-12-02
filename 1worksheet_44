@@ -1,0 +1,41 @@
+#include<stdio.h>
+
+double plus(double n1, double n2);//프로토타입: main함수를 맨 위에 쓰고 싶을 때 사용
+double minus(double n1, double n2);
+double multiply(double n1, double n2);
+double divide(double n1, double n2);
+
+int main(void) {
+   double n1, n2;
+
+   printf("두 숫자를 입력하세요: ");
+   scanf_s("%lf", &n1);
+   scanf_s("%lf", &n2);
+
+   /*double result, result2, result3, result4;
+   result = plus(n1, n2);
+   result2 = minus(n1, n2);
+   result3 = multiply(n1, n2);
+   result4 = divide(n1, n2);*/
+
+   printf("[출력]\n");
+   printf("더하기 = %.1f\n", plus(n1,n2));
+   printf("빼기 = %.1f\n", minus(n1, n2));
+   printf("곱하기 = %.1f\n", multiply(n1, n2));
+   printf("나누기 = %.1f\n", divide(n1, n2));
+
+}
+
+//함수는 호출보다 앞에 정의
+double plus(double n1, double n2) {
+   return n1 + n2;
+}
+double minus(double n1, double n2) {
+   return n1 - n2;
+}
+double multiply(double n1, double n2) {
+   return n1 * n2;
+}
+double divide(double n1, double n2) {
+   return n1 / n2;
+}

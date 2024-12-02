@@ -1,0 +1,8 @@
+//12와 같음
+#include <stdio.h>
+
+int main()
+{
+	for (int i = 65; i <= 70; i++)
+		printf("%d %c\n", i, i);
+}

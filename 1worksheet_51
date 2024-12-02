@@ -1,0 +1,30 @@
+51
+#include<stdio.h>
+#include<math.h>
+struct point {
+   int x;
+   int y;
+};
+struct rectangle {
+   struct point p1;
+   struct point p2;
+};
+
+double distance(point p1, point p2);
+
+int main() {
+   point p1, p2;
+   printf("한 점의 좌표(x,y): ");
+   scanf_s("%d %d", &p1.x, &p1.y);
+   printf("한 점의 좌표(x,y): ");
+   scanf_s("%d %d", &p2.x, &p2.y);
+
+   printf("(%d, %d)-(%d, %d)의 거리 = %f\n",
+      p1.x, p1.y, p2.x, p2.y, distance(p1, p2));
+}
+
+double distance(point p1, point p2)
+{
+   return sqrt((p2.x - p1.x)* (p2.x - p1.x)
+      + (p2.y - p1.y)* (p2.y - p1.y));
+}

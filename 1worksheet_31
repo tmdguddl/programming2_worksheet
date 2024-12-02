@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main() {
+    int arr[10];
+    int even_sum = 0, odd_sum = 0, even_val_sum = 0, odd_val_sum = 0;
+    for (int i = 0; i < 10; i++) {
+        scanf("%d", &arr[i]);
+        if (i % 2 == 0) {
+            even_sum += arr[i];
+        } else {
+            odd_sum += arr[i];
+        }
+        if (arr[i] % 2 == 0) {
+            even_val_sum += arr[i];
+        } else {
+            odd_val_sum += arr[i];
+        }
+    }
+    printf("짝수 인덱스 값의 합: %d\n", even_sum);
+    printf("홀수 인덱스 값의 합: %d\n", odd_sum);
+    printf("짝수 값의 합: %d\n", even_val_sum);
+    printf("홀수 값의 합: %d\n", odd_val_sum);
+}

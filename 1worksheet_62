@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main() {
+    int num;
+
+    printf("숫자 입력: ");
+    scanf("%d", &num);
+
+    printf("입력한 숫자 %d의 2배: %d\n", num, num << 1);
+    printf("입력한 숫자 %d의 4배: %d\n", num, num << 2);
+    printf("입력한 숫자 %d의 6배: %d\n", num, (num << 1) + (num << 2));
+    printf("입력한 숫자 %d의 8배: %d\n", num, num << 3);
+    printf("입력한 숫자 %d의 16배: %d\n", num, num << 4);
+}
